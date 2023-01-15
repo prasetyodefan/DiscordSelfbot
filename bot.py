@@ -2,7 +2,7 @@
 # Simple Discord SelfBot
 # Created By Viloid ( github.com/vsec7 )
 # Use At Your Own Risk
-
+#tes
 import requests, random, sys, yaml, time
 
 class Discord:
@@ -22,6 +22,7 @@ class Discord:
     def sendMessage(self, cid, txt):    
         u = requests.post(self.base + "/channels/" + str(cid) + "/messages", headers=self.auth, json={ 'content': txt }).json()
         return u
+
 
     def replyMessage(self, cid, mid, txt):    
         u = requests.post(self.base + "/channels/" + str(cid) + "/messages", headers=self.auth, json={ 'content': txt, 'message_reference': { 'message_id': str(mid) } }).json()
